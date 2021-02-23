@@ -8,7 +8,4 @@ function callBack(){
     fetch('https://pokeapi.co/api/v2/pokemon/${value}')
   .then(response => response.json())
   .then(data => console.log(data));
-
-  const pokename = data['Name'];
 }
-console.log(pokename);
