@@ -5,9 +5,10 @@ button.addEventListener("click", callBack);
 function callBack(){
     const value = input.value;
 
-    fetch('https://pokeapi.co/api/v2/pokemon${value}')
+    fetch('https://pokeapi.co/api/v2/pokemon/${value}')
   .then(response => response.json())
   .then(data => console.log(data));
-    console.log(1);
+
+  const pokename = data['Name'];
 }
-callBack();
+console.log(pokename);
